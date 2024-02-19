@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <title>S6 L1</title>
+  </head>
+
+  <!-- esercizi per allenamento bootstrap facendo colonne e griglie di varie dimensioni modificandosi 
+   in  base al breakpoint cioè la grandezza dello schermo(RICORDA OGNI GRIGLIA LA SOMMA DELLE colonne 
+   in una RIGA NON DEVE SUPERARE 12)  quindi se in una griglia voglio definire 3 colonne uguali 
+   posso fare col-md-4 poiche (4+4+4=12) questo vale se voglio fare di diverse misure come per esempio
+   sempre con tre colonne (4+6+3=12) -->
+  <body>
+    <!-- per dividere delle classi all'interno della classe si usa la barra spaziatrice
+    mentre per scrivere un unica classe si usa il trattino come per esempio text-center oppure 
+    per metterne 2 nella stessa classe col-md-4 bg-primary(qua ho creato una colonna di media dimensione
+    dimensione 4 e poi con backraund colorato in questo casp primary è blu) -->
+    <!-- inserire sempre una classe container per mettere dentro una griglia -->
+    <div class="container">
+      <!-- text-center per posizionare al centro il testo -->
+      <h1 class="text-center">Pratica con Grid System</h1>
+    </div>
+
+    <div class="container">
+      <h2 class="text-center">Esercizio 1</h2>
+      <div class="row">
+        <!-- row si inserisce come classe per creare la griglia con le colonne all'interno -->
+        <div
+          class="col-md-4 bg-primary text-white p-3 border border-black border-2"
+        >
+          <!-- p-3 sarebbe l'inserimento del padding di grandezza 3, poi per mettere il bordo su tutti 
+        i lati uso border e poi mettendo un numero vicino fino a 5/6 indica la grandezza del bordo
+        oppure mettendo il colore -->
+          1
+        </div>
+        <div
+          class="col-md-4 bg-primary text-white p-3 border border-black border-2"
+        >
+          2
+        </div>
+        <div
+          class="col-md-4 bg-primary text-white p-3 border border-black border-2"
+        >
+          3
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 class="text-center">Esercizio 2</h2>
+      <div class="row">
+        <div
+          class="col-12 col-md bg-warning p-3 text-black border border-2 border-black"
+        >
+          <!-- col-12 rendo le colonne a larghezza completa su tutti i dispositvi e 
+        col-md specifico che su schermi di medie dimensioni e superiori, le colonne saranno disposte
+        orizzontalmente e su dispositivi mobile e tablet grazie a col-12 si impileranno automaticamente -->
+          1
+        </div>
+        <div
+          class="col-12 col-md bg-warning p-3 text-black border border-2 border-black"
+        >
+          2
+        </div>
+        <div
+          class="col-12 col-md bg-warning p-3 text-black border border-2 border-black"
+        >
+          3
+        </div>
+      </div>
+    </div>
+
+    <!-- nell'esercizio 3 bisogna creare il numero di griglie che corrispondono ai diversi breakpoint
+    quimdi mobile, tablet, schermi medi e schermi grandi (precisamente xs, sm, md, lg, kl, xxl); ad ogni griglia le colonne partono incolonnate
+    e poi in base alla grandezza dello schermo si allineano (tranne in questo caso per mobile che rimangono sempre allineate)
+    per fsr questo ogni griglia va da:
+    xs per schermo <576px,
+    sm per schermo >= 576px,
+    md per schermo >= 768px,
+    lg per schermo >= 992 px,
+    xl per schermo >= 1200px,
+    xxl per schermo >= 1400px -->
+    <div class="container">
+      <h2 class="text-center">Esercizio 3</h2>
+      <div class="row">
+        <h5 class="text-center">Griglia xs</h5>
+        <div
+          class="col-4 bg-success text-white p-3 border border-2 border-black"
+        >
+          1
+        </div>
+        <div
+          class="col-4 bg-success text-white p-3 border border-2 border-black"
+        >
+          2
+        </div>
+        <div
+          class="col-4 bg-success text-white p-3 border border-2 border-black"
+        >
+          3
+        </div>
+      </div>
+      <div class="row">
+        <h5 class="text-center">Griglia sm</h5>
+        <div
+          class="col-sm-4 bg-success text-white p-3 border border-black border-2"
+        >
+          1
+        </div>
+        <div
+          class="col-sm-4 bg-success text-white p-3 border border-black border-2"
+        >
+          2
+        </div>
+        <div
+          class="col-sm-4 bg-success text-white p-3 border border-black border-2"
+        >
+          3
+        </div>
+      </div>
+      <div class="row">
+        <h5 class="text-center">Griglia md</h5>
+        <div
+          class="col-md-4 bg-success text-white p-3 border border-black border-2"
+        >
+          1
+        </div>
+        <div
+          class="col-md-4 bg-success text-white p-3 border border-black border-2"
+        >
+          2
+        </div>
+        <div
+          class="col-md-4 bg-success text-white p-3 border border-black border-2"
+        >
+          3
+        </div>
+      </div>
+      <div class="row">
+        <h5 class="text-center">Griglia lg</h5>
+        <div
+          class="col-lg-4 bg-success text-white p-3 border border-black border-2"
+        >
+          1
+        </div>
+        <div
+          class="col-lg-4 bg-success text-white p-3 border border-black border-2"
+        >
+          2
+        </div>
+        <div
+          class="col-lg-4 bg-success text-white p-3 border border-black border-2"
+        >
+          3
+        </div>
+      </div>
+      <div class="row">
+        <h5 class="text-center">Griglia xl</h5>
+        <div
+          class="col-xl-4 bg-success text-white p-3 border border-black border-2"
+        >
+          1
+        </div>
+        <div
+          class="col-xl-4 bg-success text-white p-3 border border-black border-2"
+        >
+          2
+        </div>
+        <div
+          class="col-xl-4 bg-success text-white p-3 border border-black border-2"
+        >
+          3
+        </div>
+      </div>
+      <div class="row">
+        <h5 class="text-center">Griglia xxl</h5>
+        <div
+          class="col-xxl-4 bg-success text-white p-3 border border-black border-2"
+        >
+          1
+        </div>
+        <div
+          class="col-xxl-4 bg-success text-white p-3 border border-black border-2"
+        >
+          2
+        </div>
+        <div
+          class="col-xxl-4 bg-success text-white p-3 border border-black border-2"
+        >
+          3
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 class="text-center">Esercizio 4</h2>
+      <div class="row">
+        <div
+          class="col-lg-5 bg-danger text-white p-3 border border-2 border-black"
+        >
+          1
+        </div>
+        <div
+          class="col-lg-2 bg-danger text-white p-3 border border-2 border-black"
+        >
+          2
+        </div>
+        <div
+          class="col-lg-5 bg-danger text-white p-3 border border-2 border-black"
+        >
+          3
+        </div>
+      </div>
+      <div class="row">
+        <div
+          class="col-lg-3 bg-danger text-white p-3 border border-2 border-black"
+        >
+          1
+        </div>
+        <div
+          class="col-lg-6 bg-danger text-white p-3 border border-2 border-black"
+        >
+          2
+        </div>
+        <div
+          class="col-lg-3 bg-danger text-white p-3 border border-2 border-black"
+        >
+          3
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 class="text-center">Esercizio 5</h2>
+      <div class="row">
+        <div
+          class="col-md-6 col-lg-4 bg-info p-3 text-white border border-2 border-black"
+        >
+          1
+        </div>
+        <div
+          class="col-md-6 col-lg-8 bg-info p-3 text-white border border-2 border-black"
+        >
+          <div class="row">
+            <div
+              class="col-md-6 bg-secondary text-white p-3 border border-2 border-black"
+            ></div>
+            <div
+              class="col-md-6 bg-secondary text-white p-3 border border-2 border-black"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <!-- Prima colonna -->
+        <div class="col-lg-6 col-md-5 bg-secondary text-white p-3">1</div>
+
+        <!-- Seconda colonna spostata di due posizioni su schermi di dimensioni medie e superiori 
+        quindi la seconda colonna con il backround più scuro passa al primo posto 
+    oltre il desktop mentre prima ritorna normale-->
+        <div class="col-lg-6 col-md-5 order-md-first bg-dark text-white p-3">
+          2
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
